@@ -5,20 +5,10 @@
 namespace Nexus {
 	class Game {
 	public:
-		Game();
-		~Game();
-
-		void Init(const char* title, int width, int height, bool fullscreen);
-
-		void Update();
-		bool Running();
-		void Render();
-		void Clean();
-
-		static SDL_Renderer* renderer;
-
-	private:
-		bool isRunning = false;
-		SDL_Window* window;
+		static void Init();
+		static void HandleEvents(SDL_Event event);
+		static void Render();
+		static void Update();
+		static void Clean();
 	};
 }
