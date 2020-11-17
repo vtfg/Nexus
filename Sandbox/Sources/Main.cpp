@@ -6,12 +6,13 @@ namespace Nexus {
 	Sprite* player = new Sprite;
 
 	void Game::Init() {
-		player->Init("Assets/dino.png", 24, 24);
+		player->Init("Assets/dino.png", 24, 24, 0);
+		player->velocity = 24;
 	}
 
 	void Game::HandleEvents(SDL_Event event) {
 		if (event.type == SDL_KEYDOWN) {
-		Vec2<int> currentPosition = player->GetPosition();
+			Vec2<int> currentPosition = player->GetPosition();
 
 			switch (event.key.keysym.sym) {
 			case SDLK_w:
@@ -24,6 +25,7 @@ namespace Nexus {
 			{
 				std::cout << "A pressed" << std::endl;
 				player->SetPosition(Nexus::Vec2<int>(currentPosition.x - player->velocity, currentPosition.y));
+				player->SetFlip(SDL_FLIP_HORIZONTAL);
 				break;
 			}
 			case SDLK_s:
@@ -36,6 +38,7 @@ namespace Nexus {
 			{
 				std::cout << "D pressed" << std::endl;
 				player->SetPosition(Nexus::Vec2<int>(currentPosition.x + player->velocity, currentPosition.y));
+				player->SetFlip(SDL_FLIP_NONE);
 				break;
 			}
 			}
@@ -49,7 +52,8 @@ namespace Nexus {
 	void Game::Update() {
 	}
 
-	void Game::Clean() {
+	void Nexus::Game::Clean() {
+		delete player;
 	}
 }
 

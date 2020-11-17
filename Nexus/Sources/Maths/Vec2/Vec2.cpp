@@ -1,4 +1,4 @@
-#include "Types/Vec2/Vec2.hpp"
+#include "Maths/Vec2/Vec2.hpp"
 
 namespace Nexus {
 	template<typename T>

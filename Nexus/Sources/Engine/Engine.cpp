@@ -1,5 +1,5 @@
 #include "Engine/Engine.hpp"
-#include "Game/Game.hpp"
+#include "Engine/Game.hpp"
 
 namespace Nexus {
 	SDL_Renderer* Engine::renderer = nullptr;

@@ -3,6 +3,7 @@
 bin-int/
 
 # Visual Studio files and folder
+.sln
 .vs/
 **.vcxproj
 **.vcxproj.filters

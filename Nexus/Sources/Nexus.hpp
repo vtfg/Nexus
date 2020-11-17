@@ -2,11 +2,10 @@
 
 // Game
 #include "Engine/Engine.hpp"
-#include "Game/Game.hpp"
+#include "Engine/Game.hpp"
 
-// Sprites
-#include "Sprite/Sprite.hpp"
+// Graphics
+#include "Graphics/Sprite/Sprite.hpp"
 
-// Types
-#include "Types/Entity/Entity.hpp"
-#include "Types/Vec2/Vec2.hpp"
+// Maths
+#include "Maths/Vec2/Vec2.hpp"
