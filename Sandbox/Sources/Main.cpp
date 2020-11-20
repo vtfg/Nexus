@@ -1,9 +1,10 @@
 #define SDL_MAIN_HANDLED
 
 #include <Nexus.hpp>
+#include "Player/Player.hpp"
 
 namespace Nexus {
-	Sprite* player = new Sprite;
+	Player* player = new Player;
 
 	void Game::Init() {
 		player->Init("Assets/dino.png", 24, 24, 0);
@@ -11,37 +12,29 @@ namespace Nexus {
 	}
 
 	void Game::HandleEvents(SDL_Event event) {
-		if (event.type == SDL_KEYDOWN) {
-			Vec2<int> currentPosition = player->GetPosition();
+		Vec2<int> currentPosition = player->GetPosition();
 
-			switch (event.key.keysym.sym) {
-			case SDLK_w:
-			{
-				std::cout << "W pressed" << std::endl;
-				player->SetPosition(Nexus::Vec2<int>(currentPosition.x, currentPosition.y - player->velocity));
-				break;
-			}
-			case SDLK_a:
-			{
-				std::cout << "A pressed" << std::endl;
-				player->SetPosition(Nexus::Vec2<int>(currentPosition.x - player->velocity, currentPosition.y));
-				player->SetFlip(SDL_FLIP_HORIZONTAL);
-				break;
-			}
-			case SDLK_s:
-			{
-				std::cout << "S pressed" << std::endl;
-				player->SetPosition(Nexus::Vec2<int>(currentPosition.x, currentPosition.y + player->velocity));
-				break;
-			}
-			case SDLK_d:
-			{
-				std::cout << "D pressed" << std::endl;
-				player->SetPosition(Nexus::Vec2<int>(currentPosition.x + player->velocity, currentPosition.y));
-				player->SetFlip(SDL_FLIP_NONE);
-				break;
-			}
-			}
+		switch (Keyboard::GetKeyDown(event)) {
+		case SDLK_w:
+		{
+			player->MoveUp();
+			break;
+		}
+		case SDLK_a:
+		{
+			player->MoveLeft();
+			break;
+		}
+		case SDLK_s:
+		{
+			player->MoveDown();
+			break;
+		}
+		case SDLK_d:
+		{
+			player->MoveRight();
+			break;
+		}
 		}
 	}
 
@@ -52,7 +45,7 @@ namespace Nexus {
 	void Game::Update() {
 	}
 
-	void Nexus::Game::Clean() {
+	void Game::Clean() {
 		delete player;
 	}
 }

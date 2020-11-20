@@ -23,7 +23,6 @@ namespace Nexus {
 		Vec2<int> GetPosition();
 		void SetPosition(Vec2<int> newPosition);
 
-		int velocity = 0;
 	private:
 		SDL_Texture* texture = nullptr;
 		SDL_Rect sourceRect, destinationRect;
