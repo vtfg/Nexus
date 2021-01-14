@@ -1,7 +1,9 @@
 #include "Nexus.h"
 
 int main() {
-	Nexus::Print();
+	Nexus::Log::Init();
+
+	NEXUS_TRACE("Hello World from Sandbox!");
 
 	return 0;
 }

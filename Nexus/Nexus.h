@@ -1,3 +1,3 @@
 #pragma once
 
-#include "src/Print.h"
+#include "src/Log.h"
