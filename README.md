@@ -1,3 +1,6 @@
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/06c9f01ad7214c80a28043c4ee32521c)](https://app.codacy.com/gh/vitogd/Nexus?utm_source=github.com&utm_medium=referral&utm_content=vitogd/Nexus&utm_campaign=Badge_Grade)
+
 <h1 align="center">
     Nexus
 
