@@ -18,9 +18,8 @@ project "Nexus"
 	objdir(proj_objdir)
 
 	files {
-		"%{prj.name}/Nexus.h",
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/include/**.h",
+		"%{prj.name}/src/**.cpp"
 	}
 
 	excludes {
@@ -28,6 +27,7 @@ project "Nexus"
 	}
 
 	includedirs {
+		"%{prj.name}/include",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
@@ -46,12 +46,12 @@ project "Sandbox"
 
 	files {
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs {
-		"Nexus/vendor/spdlog/include",
-		"Nexus"
+		"Nexus/include",
+		"Nexus/vendor/spdlog/include"
 	}
 
 	links {
