@@ -1,18 +1,17 @@
 #include <Nexus/Window.h>
-#include <Nexus/Log.h>
 
 namespace Nexus {
+
 	WindowProps Window::props;
 	SDL_Window* Window::window = nullptr;
-	SDL_Renderer* Window::renderer = nullptr;
 	bool Window::isOpen = false;
 
 	SDL_Window& Window::Get() {
 		return *window;
 	}
 
-	SDL_Renderer& Window::GetRenderer() {
-		return *renderer;
+	WindowProps& Window::GetProps() {
+		return props;
 	}
 
 	void Window::Create(WindowProps& windowProps) {
@@ -29,14 +28,13 @@ namespace Nexus {
 			NEXUS_CORE_ERROR("Can not create window: {}", SDL_GetError());
 		}
 
-		int vsync = props.Vsync ? SDL_RENDERER_PRESENTVSYNC : 0;
-		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | vsync);
-
-		if (renderer == NULL) {
-			NEXUS_CORE_ERROR("Can not create renderer: {}", SDL_GetError());
-		}
+		Renderer::Create(props);
 
 		isOpen = true;
+	}
+
+	bool Window::ShouldClose() {
+		return !isOpen;
 	}
 
 }

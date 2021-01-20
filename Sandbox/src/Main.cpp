@@ -5,7 +5,8 @@ int main(int argc, char** argv) {
 		"Sandbox", // Title
 		640, // Width
 		480, // Height
-		true // Use vsync?
+		true, // Use vsync?
+		{ 0, 0, 0, 255 } // Window's background color
 	};
 
 	Nexus::Log::Init();
