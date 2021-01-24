@@ -8,15 +8,15 @@ namespace Nexus {
 		return *renderer;
 	}
 
-	void Renderer::Create(WindowProps& props) {
-		int vsync = props.Vsync ? SDL_RENDERER_PRESENTVSYNC : 0;
+	void Renderer::Create(Configuration& config) {
+		int vsync = config.Vsync ? SDL_RENDERER_PRESENTVSYNC : 0;
 
 		renderer = SDL_CreateRenderer(&Window::Get(), -1, SDL_RENDERER_ACCELERATED | vsync);
 
-		SDL_SetRenderDrawColor(renderer, props.ClearColor.r, props.ClearColor.g, props.ClearColor.b,
-			props.ClearColor.a);
+		SDL_SetRenderDrawColor(renderer, config.ClearColor.r, config.ClearColor.g, config.ClearColor.b,
+			config.ClearColor.a);
 
-		if (renderer != NULL) {
+		if (renderer == NULL) {
 			NEXUS_CORE_ERROR("Can not create renderer: {}", SDL_GetError());
 		}
 	}
