@@ -1,6 +1,6 @@
 name: MSBuild
 
-on: [push]
+on: [push, pull_request]
 
 env:
   SOLUTION_FILE_PATH: .
@@ -16,11 +16,11 @@ jobs:
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1
     
+    - name: Download submodules
+      run: git submodule init
+    
     - name: Generate solutions
-      run: |
-        cd scripts
-        GenerateProjects.bat
-        cd ..
+      run: ./scripts/GenerateProjects.bat
 
     - name: Restore NuGet packages
       working-directory: ${{env.GITHUB_WORKSPACE}}
