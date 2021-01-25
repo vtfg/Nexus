@@ -2,8 +2,12 @@
     Nexus
 
   <p align="center">
-    <a href="https://app.codacy.com/gh/vitogd/Nexus?utm_source=github.com&utm_medium=referral&utm_content=vitogd/Nexus&utm_campaign=Badge_Grade" >
+   <a href="https://app.codacy.com/gh/vitogd/Nexus?utm_source=github.com&utm_medium=referral&utm_content=vitogd/Nexus&utm_campaign=Badge_Grade" >
      <img alt="Code Quality" src="https://img.shields.io/codacy/grade/06c9f01ad7214c80a28043c4ee32521c?style=for-the-badge">
+   </a>
+    
+   <a href="https://github.com/vitogd/Nexus/actions?query=workflow%3AMSBuild">
+     <img alt="Build status" src="https://img.shields.io/github/workflow/status/vitogd/Nexus/MSBuild?style=for-the-badge">
    </a>
     
    <a href="https://github.com/vitogd/Nexus/issues">
