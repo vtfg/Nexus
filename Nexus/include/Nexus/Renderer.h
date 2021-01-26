@@ -8,7 +8,7 @@ namespace Nexus {
 	public:
 		static SDL_Renderer& Get();
 
-		static void Create(Configuration& props);
+		static void Create(Configuration& config);
 
 	private:
 		static SDL_Renderer* renderer;

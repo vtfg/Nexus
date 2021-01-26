@@ -1,12 +1,15 @@
 #include <Nexus.h>
 
+#include "Sandbox.h"
+
 int main(int argc, char** argv) {
+	Sandbox* sandbox = new Sandbox();
+
 	Nexus::Configuration config = {
-		"Sandbox", 640, 480, true,
+		"Sandbox", 640, 480, true
 	};
 
-	Nexus::Log::Init();
-	Nexus::Window::Create(config);
+	sandbox->Run(config);
 
 	return 0;
 }

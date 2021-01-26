@@ -4,3 +4,4 @@
 #include <Nexus/Window.h>
 #include <Nexus/Renderer.h>
 #include <Nexus/Configuration.h>
+#include <Nexus/Game.h>
