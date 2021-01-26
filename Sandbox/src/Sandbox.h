@@ -1,4 +1,5 @@
 #pragma once
+
 #include <Nexus.h>
 
 class Sandbox : public Nexus::Game {
@@ -11,8 +12,8 @@ private:
 		NEXUS_TRACE("Closed");
 	}
 
-	void OnEvent(SDL_Event& event) {
-		if (event.key.keysym.sym == SDLK_ESCAPE && event.key.type != SDL_KEYDOWN) {
+	void OnEvent() {
+		if (Nexus::Keyboard::GetKeyDown(SDLK_ESCAPE)) {
 			NEXUS_INFO("You pressed ESC");
 		}
 	}

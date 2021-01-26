@@ -1,5 +1,6 @@
 #include <Nexus/Game.h>
 #include <Nexus/Window.h>
+#include <Nexus/Event.h>
 
 namespace Nexus {
 
@@ -13,7 +14,9 @@ namespace Nexus {
 			SDL_Event event;
 
 			while (SDL_PollEvent(&event)) {
-				OnEvent(event);
+				Event::Update(event);
+				Window::Update();
+				OnEvent();
 			}
 
 			OnUpdate();

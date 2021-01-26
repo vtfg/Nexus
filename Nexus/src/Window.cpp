@@ -33,6 +33,12 @@ namespace Nexus {
 		isOpen = true;
 	}
 
+	void Window::Update() {
+		if (Event::Get().type == SDL_QUIT) {
+			isOpen = false;
+		}
+	}
+
 	bool Window::ShouldClose() {
 		return !isOpen;
 	}

@@ -9,7 +9,7 @@ namespace Nexus {
 		virtual void OnStart() {}
 		virtual void OnClose() {}
 
-		virtual void OnEvent(SDL_Event& event) {}
+		virtual void OnEvent() {}
 		virtual void OnUpdate() {}
 		virtual void OnRender() {}
 

@@ -6,6 +6,7 @@
 #include <Nexus/Configuration.h>
 #include <Nexus/Renderer.h>
 #include <Nexus/Log.h>
+#include <Nexus/Event.h>
 
 namespace Nexus {
 
@@ -16,6 +17,8 @@ namespace Nexus {
 		Configuration& GetConfig();
 
 		static void Create(Configuration& props);
+
+		static void Update();
 
 		static bool ShouldClose();
 
