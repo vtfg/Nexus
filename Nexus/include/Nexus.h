@@ -1,8 +1,13 @@
 #pragma once
 
+// Graphics
+#include <Nexus/Graphics/Renderer.h>
+
+// Window
+#include <Nexus/Window/Window.h>
+#include <Nexus/Window/Keyboard.h>
+
+// Etc
 #include <Nexus/Log.h>
-#include <Nexus/Window.h>
-#include <Nexus/Renderer.h>
-#include <Nexus/Configuration.h>
 #include <Nexus/Game.h>
-#include <Nexus/Keyboard.h>
+#include <Nexus/Configuration.h>

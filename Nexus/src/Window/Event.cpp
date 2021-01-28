@@ -1,4 +1,4 @@
-#include <Nexus/Event.h>
+#include <Nexus/Window/Event.h>
 
 namespace Nexus {
 

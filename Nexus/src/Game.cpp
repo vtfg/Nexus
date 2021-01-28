@@ -1,6 +1,6 @@
 #include <Nexus/Game.h>
-#include <Nexus/Window.h>
-#include <Nexus/Event.h>
+#include <Nexus/Window/Window.h>
+#include <Nexus/Window/Event.h>
 
 namespace Nexus {
 

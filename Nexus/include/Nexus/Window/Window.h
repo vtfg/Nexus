@@ -4,9 +4,9 @@
 #include <iostream>
 
 #include <Nexus/Configuration.h>
-#include <Nexus/Renderer.h>
+#include <Nexus/Graphics/Renderer.h>
 #include <Nexus/Log.h>
-#include <Nexus/Event.h>
+#include <Nexus/Window/Event.h>
 
 namespace Nexus {
 

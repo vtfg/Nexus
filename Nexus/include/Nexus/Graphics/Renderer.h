@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Nexus/Window.h>
+#include <Nexus/Window/Window.h>
 
 namespace Nexus {
 

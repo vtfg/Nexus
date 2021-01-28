@@ -1,4 +1,4 @@
-#include <Nexus/Keyboard.h>
+#include <Nexus/Window/Keyboard.h>
 
 namespace Nexus {
 
