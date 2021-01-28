@@ -12,6 +12,8 @@ namespace Nexus {
 		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return clientLogger; }
 
 	private:
+		Log() {};
+
 		static std::shared_ptr<spdlog::logger> coreLogger;
 		static std::shared_ptr<spdlog::logger> clientLogger;
 	};

@@ -11,6 +11,8 @@ namespace Nexus {
 		static void Create(Configuration& config);
 
 	private:
+		Renderer() {};
+
 		static SDL_Renderer* renderer;
 	};
 

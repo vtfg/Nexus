@@ -11,6 +11,8 @@ namespace Nexus {
 		static SDL_Event& Get();
 
 	private:
+		Event() {};
+
 		static SDL_Event event;
 	};
 

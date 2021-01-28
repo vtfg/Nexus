@@ -25,7 +25,7 @@ namespace Nexus {
 		static bool isOpen;
 
 	private:
-		Window();
+		Window() {};
 
 		static SDL_Window* window;
 		static Configuration config;
