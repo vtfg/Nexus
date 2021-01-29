@@ -12,7 +12,7 @@ namespace Nexus {
 
 	class Window {
 	public:
-		static SDL_Window& Get();
+		static SDL_Window* Get();
 
 		Configuration& GetConfig();
 

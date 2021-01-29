@@ -20,7 +20,10 @@ namespace Nexus {
 			}
 
 			OnUpdate();
+
+			Renderer::Clear();
 			OnRender();
+			Renderer::Present();
 		}
 
 		OnClose();

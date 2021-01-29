@@ -6,8 +6,8 @@ namespace Nexus {
 	SDL_Window* Window::window = nullptr;
 	bool Window::isOpen = false;
 
-	SDL_Window& Window::Get() {
-		return *window;
+	SDL_Window* Window::Get() {
+		return window;
 	}
 
 	Configuration& Window::GetConfig() {

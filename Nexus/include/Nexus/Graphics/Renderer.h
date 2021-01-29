@@ -6,9 +6,12 @@ namespace Nexus {
 
 	class Renderer {
 	public:
-		static SDL_Renderer& Get();
+		static SDL_Renderer* Get();
 
 		static void Create(Configuration& config);
+
+		static void Clear();
+		static void Present();
 
 	private:
 		Renderer() {};
