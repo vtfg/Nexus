@@ -30,11 +30,11 @@ private:
 		rect.x = 320 - rect.w / 2;
 		rect.y = 240 - rect.h / 2;
 
-		SDL_SetRenderDrawColor(Nexus::Renderer::Get(), 255, 255, 255, 255);
+		Nexus::Renderer::SetDrawColor(SDL_Color{ 255, 255, 255, 255 });
 
-		SDL_RenderDrawRect(Nexus::Renderer::Get(), &rect);
+		Nexus::Renderer::DrawRect(&rect);
 
-		SDL_SetRenderDrawColor(Nexus::Renderer::Get(), 0, 0, 0, 255);
+		Nexus::Renderer::SetDrawColor(SDL_Color{ 0, 0, 0, 255 });
 	}
 
 };

@@ -29,4 +29,12 @@ namespace Nexus {
 		SDL_RenderPresent(renderer);
 	}
 
+	void Renderer::SetDrawColor(SDL_Color& color) {
+		SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+	}
+
+	void Renderer::DrawRect(SDL_Rect* rect) {
+		SDL_RenderDrawRect(renderer, rect);
+	}
+
 }

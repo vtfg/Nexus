@@ -12,6 +12,10 @@ namespace Nexus {
 
 		static void Clear();
 		static void Present();
+		
+		static void SetDrawColor(SDL_Color& color);
+
+		static void DrawRect(SDL_Rect* rect);
 
 	private:
 		Renderer() {};
