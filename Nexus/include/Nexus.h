@@ -7,6 +7,9 @@
 #include <Nexus/Window/Window.h>
 #include <Nexus/Window/Keyboard.h>
 
+// Math
+#include <Nexus/Math/Color.h>
+
 // Etc
 #include <Nexus/Log.h>
 #include <Nexus/Game.h>

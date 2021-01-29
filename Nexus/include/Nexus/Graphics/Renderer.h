@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Nexus/Window/Window.h>
+#include <Nexus/Math/Color.h>
 
 namespace Nexus {
 
@@ -13,7 +14,7 @@ namespace Nexus {
 		static void Clear();
 		static void Present();
 		
-		static void SetDrawColor(SDL_Color& color);
+		static void SetDrawColor(Color color);
 
 		static void DrawRect(SDL_Rect* rect);
 

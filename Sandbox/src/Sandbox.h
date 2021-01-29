@@ -4,6 +4,8 @@
 
 class Sandbox : public Nexus::Game {
 private:
+	int teste = 0;
+
 	void OnStart() {
 		NEXUS_TRACE("Started");
 	}
@@ -30,11 +32,11 @@ private:
 		rect.x = 320 - rect.w / 2;
 		rect.y = 240 - rect.h / 2;
 
-		Nexus::Renderer::SetDrawColor(SDL_Color{ 255, 255, 255, 255 });
+		Nexus::Renderer::SetDrawColor(Nexus::Color::WHITE);
 
 		Nexus::Renderer::DrawRect(&rect);
 
-		Nexus::Renderer::SetDrawColor(SDL_Color{ 0, 0, 0, 255 });
+		Nexus::Renderer::SetDrawColor(Nexus::Color::BLACK);
 	}
 
 };
