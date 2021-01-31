@@ -25,11 +25,11 @@ public:
 		rect.x = 320 - rect.w / 2;
 		rect.y = 240 - rect.h / 2;
 
-		// Now it's a black square on a white screen
+		renderer->rect(&rect, Nexus::Color::BLACK);
 
-		Nexus::Renderer::SetDrawColor(Nexus::Color::BLACK);
-		Nexus::Renderer::DrawRect(&rect);
-		Nexus::Renderer::SetDrawColor(Nexus::Color::WHITE);
+		renderer->drawColor(Nexus::Color::WHITE);
 	}
 
+private:
+	Nexus::StateRenderer* renderer;
 };

@@ -33,8 +33,4 @@ namespace Nexus {
 		SDL_SetRenderDrawColor(renderer, color.R, color.G, color.B, color.A);
 	}
 
-	void Renderer::DrawRect(SDL_Rect* rect) {
-		SDL_RenderDrawRect(renderer, rect);
-	}
-
 }

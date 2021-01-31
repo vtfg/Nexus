@@ -2,6 +2,7 @@
 
 // Graphics
 #include <Nexus/Graphics/Renderer.h>
+#include <Nexus/Graphics/StateRenderer.h>
 
 // Window
 #include <Nexus/Window/Window.h>
