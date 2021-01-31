@@ -6,8 +6,6 @@ class PlayState : public Nexus::State {
 public:
 	void OnStart() {
 		NEXUS_TRACE("PlayState started");
-
-		Nexus::Renderer::SetDrawColor(Nexus::Color::WHITE);
 	}
 
 	void OnClose() {
