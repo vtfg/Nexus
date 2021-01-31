@@ -13,8 +13,8 @@ namespace Nexus {
 
 		renderer = SDL_CreateRenderer(Window::Get(), -1, SDL_RENDERER_ACCELERATED | vsync);
 
-		SDL_SetRenderDrawColor(renderer, config.ClearColor.R, config.ClearColor.G, config.ClearColor.B,
-			config.ClearColor.A);
+		SDL_SetRenderDrawColor(renderer, Color::BLACK.R, Color::BLACK.G, Color::BLACK.B,
+			Color::BLACK.A);
 
 		if (renderer == NULL) {
 			NEXUS_CORE_ERROR("Can not create renderer: {}", SDL_GetError());

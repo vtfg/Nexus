@@ -1,23 +1,23 @@
 #pragma once
 
 #include <Nexus/Configuration.h>
+#include <Nexus/State.h>
 
 namespace Nexus {
 
 	class Game {
-	private:
-		virtual void OnStart() {}
-		virtual void OnClose() {}
-
-		virtual void OnEvent() {}
-		virtual void OnUpdate() {}
-		virtual void OnRender() {}
-
 	public:
-		Game() {};
-		virtual ~Game() = default;
+		static void Run(Configuration& config);
+		
+		static void PushState(State* state);
 
-		void Run(Configuration& config);
+		static void ChangeState(State* newState);
+
+	private:
+		Game();
+		~Game();
+		
+		static State* currentState;
 	};
 
 }

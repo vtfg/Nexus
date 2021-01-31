@@ -4,11 +4,13 @@
 
 namespace Nexus {
 
+	State* Game::currentState = nullptr;
+
 	void Game::Run(Configuration& config) {
 		Log::Init();
 		Window::Create(config);
 
-		OnStart();
+		currentState->OnStart();
 
 		while (!Window::ShouldClose()) {
 			SDL_Event event;
@@ -16,17 +18,28 @@ namespace Nexus {
 			while (SDL_PollEvent(&event)) {
 				Event::Update(event);
 				Window::Update();
-				OnEvent();
 			}
 
-			OnUpdate();
+			currentState->OnUpdate();
 
 			Renderer::Clear();
-			OnRender();
+			currentState->OnRender();
 			Renderer::Present();
 		}
 
-		OnClose();
+		currentState->OnClose();
+	}
+
+	void Game::PushState(State* state) {
+		currentState = state;
+	}
+
+	void Game::ChangeState(State* newState) {
+		currentState->OnClose();
+
+		currentState = newState;
+
+		currentState->OnStart();
 	}
 
 }

@@ -1,13 +1,12 @@
-#include "Sandbox.h"
+#include "MenuState.h"
 
 int main(int argc, char** argv) {
-	Sandbox* sandbox = new Sandbox();
-
 	Nexus::Configuration config = {
 		"Sandbox", 640, 480, true
 	};
 
-	sandbox->Run(config);
+	Nexus::Game::PushState(new MenuState());
+	Nexus::Game::Run(config);
 
 	return 0;
 }

@@ -13,4 +13,5 @@
 // Etc
 #include <Nexus/Log.h>
 #include <Nexus/Game.h>
+#include <Nexus/State.h>
 #include <Nexus/Configuration.h>
