@@ -11,6 +11,7 @@
 // Math
 #include <Nexus/Math/Color.h>
 #include <Nexus/Math/Vec2.h>
+#include <Nexus/Math/Rect.h>
 
 // Etc
 #include <Nexus/Log.h>

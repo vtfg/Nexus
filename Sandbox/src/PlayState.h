@@ -7,10 +7,9 @@ public:
 	void OnStart() {
 		NEXUS_TRACE("PlayState started");
 
-		rect.w = 200;
-		rect.h = 200;
-		rect.x = 320 - rect.w / 2;
-		rect.y = 240 - rect.h / 2;
+		rect = Nexus::Rect(200, 0);
+		rect.x = 320 - rect.GetCenter().x;
+		rect.y = 240 - rect.GetCenter().y;
 	}
 
 	void OnClose() {
@@ -24,12 +23,12 @@ public:
 	}
 
 	void OnRender() {
-		renderer->rect(&rect, Nexus::Color::BLACK);
+		renderer->Rect(&rect, Nexus::Color::BLACK);
 
-		renderer->drawColor(Nexus::Color::WHITE);
+		renderer->DrawColor(Nexus::Color::WHITE);
 	}
 
 private:
 	Nexus::StateRenderer* renderer;
-	SDL_Rect rect;
+	Nexus::Rect rect;
 };

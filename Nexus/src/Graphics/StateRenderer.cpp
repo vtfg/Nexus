@@ -3,12 +3,23 @@
 
 namespace Nexus {
 
-	void StateRenderer::rect(SDL_Rect* rect, Color rectColor) {
-		drawColor(rectColor);
+	void StateRenderer::Rect(Nexus::Rect* rect, Color rectColor) {
+		DrawColor(rectColor);
+
+		if (rect->fill) SDL_RenderFillRect(Renderer::Get(), rect);
+
 		SDL_RenderDrawRect(Renderer::Get(), rect);
 	}
 
-	void StateRenderer::drawColor(Color color) {
+	void StateRenderer::Rect(FRect* rect, Color rectColor) {
+		DrawColor(rectColor);
+
+		if (rect->fill) SDL_RenderFillRectF(Renderer::Get(), rect);
+
+		SDL_RenderDrawRectF(Renderer::Get(), rect);
+	}
+
+	void StateRenderer::DrawColor(Color color) {
 		Renderer::SetDrawColor(color);
 	}
 
