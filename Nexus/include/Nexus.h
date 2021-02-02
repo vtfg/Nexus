@@ -10,6 +10,7 @@
 
 // Math
 #include <Nexus/Math/Color.h>
+#include <Nexus/Math/Vec2.h>
 
 // Etc
 #include <Nexus/Log.h>

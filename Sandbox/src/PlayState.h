@@ -6,6 +6,11 @@ class PlayState : public Nexus::State {
 public:
 	void OnStart() {
 		NEXUS_TRACE("PlayState started");
+
+		rect.w = 200;
+		rect.h = 200;
+		rect.x = 320 - rect.w / 2;
+		rect.y = 240 - rect.h / 2;
 	}
 
 	void OnClose() {
@@ -19,12 +24,6 @@ public:
 	}
 
 	void OnRender() {
-		SDL_Rect rect;
-		rect.w = 200;
-		rect.h = 200;
-		rect.x = 320 - rect.w / 2;
-		rect.y = 240 - rect.h / 2;
-
 		renderer->rect(&rect, Nexus::Color::BLACK);
 
 		renderer->drawColor(Nexus::Color::WHITE);
@@ -32,4 +31,5 @@ public:
 
 private:
 	Nexus::StateRenderer* renderer;
+	SDL_Rect rect;
 };
