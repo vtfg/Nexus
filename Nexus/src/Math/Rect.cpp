@@ -8,7 +8,7 @@ namespace Nexus {
 		this->fill = fill;
 	}
 
-	Rect::Rect(Vec2 wh, Vec2 xy, bool fill) {
+	Rect::Rect(Vec2<int> wh, Vec2<int> xy, bool fill) {
 		w = wh.x;
 		h = wh.y;
 		x = xy.x;
@@ -24,8 +24,8 @@ namespace Nexus {
 		this->fill = fill;
 	}
 
-	Vec2 Rect::GetCenter() {
-		return Vec2(w / 2, h / 2);
+	Vec2<int> Rect::GetCenter() {
+		return Vec2<int>(w / 2, h / 2);
 	}
 
 	int Rect::Left() {
@@ -51,7 +51,7 @@ namespace Nexus {
 		this->fill = fill;
 	}
 
-	FRect::FRect(Vec2 wh, Vec2 xy, bool fill) {
+	FRect::FRect(Vec2<float> wh, Vec2<float> xy, bool fill) {
 		w = wh.x;
 		h = wh.y;
 		x = xy.x;
@@ -67,8 +67,8 @@ namespace Nexus {
 		this->fill = fill;
 	}
 
-	Vec2 FRect::GetCenter() {
-		return Vec2(w / 2, y / 2);
+	Vec2<float> FRect::GetCenter() {
+		return Vec2<float>(w / 2, y / 2);
 	}
 
 	float FRect::Left() {
