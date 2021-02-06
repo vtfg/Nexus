@@ -20,7 +20,7 @@ An user-friendly game framework with focus on 2D games.
 
 ## Getting started
 
-> Note: Nexus only builds on Windows.
+### Windows:
 
 ```console
 :: Clone the repository with submodules
@@ -34,6 +34,21 @@ $ cd scripts/
 $ GenerateProjects.bat
 
 :: You're ready! Now open Nexus.sln with Visual Studio 2019 and build the project
+```
+
+### Linux/MacOS:
+
+```bash
+# Clone the repository
+$ git clone https://github.com/vitogd/Nexus
+
+# Enter on project directory
+$ cd Nexus/
+
+# Build with CMake, creating a build folder and executing build scripts
+$ mkdir build/ && cd build/
+$ cmake .. # To build inside the current folder
+$ make
 ```
 
 ## License
