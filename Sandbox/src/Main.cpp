@@ -1,3 +1,4 @@
+#define NEXUS_MAIN
 #include "MenuState.h"
 
 int main(int argc, char** argv) {

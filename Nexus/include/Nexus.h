@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef NEXUS_MAIN
+	#define SDL_MAIN_HANDLED
+#endif
+
 // Graphics
 #include <Nexus/Graphics/Renderer.h>
 #include <Nexus/Graphics/StateRenderer.h>

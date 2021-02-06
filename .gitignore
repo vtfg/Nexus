@@ -8,3 +8,12 @@ bin-int/
 **.vcxproj
 **.vcxproj.filters
 **.vcxproj.user
+
+# Visual Studio Code folder
+.vscode/
+
+# CMake files and folders
+build/
+out/
+temp/
+CMakeSettings.json
