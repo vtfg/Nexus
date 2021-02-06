@@ -20,7 +20,7 @@ An user-friendly game framework with focus on 2D games.
 
 ## Getting started
 
-### Windows:
+### Windows
 
 ```console
 :: Clone the repository with submodules
@@ -36,7 +36,7 @@ $ GenerateProjects.bat
 :: You're ready! Now open Nexus.sln with Visual Studio 2019 and build the project
 ```
 
-### Linux/MacOS:
+### Linux/MacOS
 
 ```bash
 # Clone the repository
