@@ -39,15 +39,15 @@ $ GenerateProjects.bat
 ### Linux/MacOS
 
 ```bash
-# Clone the repository
-$ git clone https://github.com/vitogd/Nexus
+# Clone the repository with submodules
+$ git clone https://github.com/vitogd/Nexus --recursive
 
 # Enter on project directory
 $ cd Nexus/
 
-# Build with CMake, creating a build folder and executing build scripts
-$ mkdir build/ && cd build/
-$ cmake .. # To build inside the current folder
+# Build with CMake
+$ cmake -B build
+$ cd build/
 $ make
 ```
 
