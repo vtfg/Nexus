@@ -16,10 +16,13 @@ public:
 		NEXUS_TRACE("PlayState closed");
 	}
 
-	void OnUpdate() {
+	void OnEvent() {
 		if (Nexus::Keyboard::GetKeyDown(SDLK_ESCAPE)) {
 			NEXUS_INFO("You pressed ESC");
 		}
+	}
+
+	void OnUpdate() {
 	}
 
 	void OnRender() {

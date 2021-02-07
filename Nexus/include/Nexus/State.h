@@ -10,6 +10,7 @@ namespace Nexus {
 		virtual void OnStart() {}
 		virtual void OnClose() {}
 
+		virtual void OnEvent() {}
 		virtual void OnUpdate() {}
 		virtual void OnRender() {}
 	};

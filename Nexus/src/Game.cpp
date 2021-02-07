@@ -18,6 +18,7 @@ namespace Nexus {
 			while (SDL_PollEvent(&event)) {
 				Event::Update(event);
 				Window::Update();
+				currentState->OnEvent();
 			}
 
 			currentState->OnUpdate();
