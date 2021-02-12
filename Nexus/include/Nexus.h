@@ -16,6 +16,7 @@
 #include <Nexus/Math/Color.h>
 #include <Nexus/Math/Vec2.h>
 #include <Nexus/Math/Rect.h>
+#include <Nexus/Math/FloatRect.h>
 
 // Etc
 #include <Nexus/Log.h>

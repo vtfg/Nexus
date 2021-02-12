@@ -44,47 +44,4 @@ namespace Nexus {
 		return y + h;
 	}
 
-
-	FRect::FRect(float wh, float xy, bool fill) {
-		w = h = wh;
-		x = y = xy;
-		this->fill = fill;
-	}
-
-	FRect::FRect(Vec2<float> wh, Vec2<float> xy, bool fill) {
-		w = wh.x;
-		h = wh.y;
-		x = xy.x;
-		y = xy.y;
-		this->fill = fill;
-	}
-
-	FRect::FRect(float w, float h, float x, float y, bool fill) {
-		this->w = w;
-		this->h = h;
-		this->x = x;
-		this->y = y;
-		this->fill = fill;
-	}
-
-	Vec2<float> FRect::GetCenter() {
-		return Vec2<float>(w / 2, y / 2);
-	}
-
-	float FRect::Left() {
-		return x;
-	}
-
-	float FRect::Right() {
-		return x + w;
-	}
-
-	float FRect::Top() {
-		return y;
-	}
-
-	float FRect::Bottom() {
-		return y + h;
-	}
-
 }

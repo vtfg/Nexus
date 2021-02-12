@@ -3,6 +3,7 @@
 #include <SDL.h>
 
 #include <Nexus/Math/Rect.h>
+#include <Nexus/Math/FloatRect.h>
 #include <Nexus/Math/Color.h>
 
 namespace Nexus {
@@ -13,7 +14,7 @@ namespace Nexus {
 		~StateRenderer() {}
 
 		void Rect(Rect* rect, Color color);
-		void Rect(FRect* rect, Color color);
+		void Rect(FloatRect* rect, Color color);
 
 		void DrawColor(Color color);
 	};

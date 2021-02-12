@@ -5,8 +5,9 @@ add_library(Nexus
 
 	# Math
 	src/Math/Color.cpp
-	src/Math/Rect.cpp
 	src/Math/Vec2.cpp
+	src/Math/Rect.cpp
+	src/Math/FloatRect.cpp
 
 	# Window
 	src/Window/Event.cpp

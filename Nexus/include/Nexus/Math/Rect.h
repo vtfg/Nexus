@@ -22,20 +22,4 @@ namespace Nexus {
 		bool fill = true;
 	};
 
-	struct FRect : SDL_FRect {
-		FRect() {}
-		FRect(float wh, float xy, bool fill = true);
-		FRect(Vec2<float> wh, Vec2<float> xy, bool fill = true);
-		FRect(float w, float h, float x, float y, bool fill = true);
-
-		Vec2<float> GetCenter();
-
-		float Left();
-		float Right();
-		float Top();
-		float Bottom();
-
-		bool fill = true;
-	};
-
 }

@@ -13,7 +13,7 @@ namespace Nexus {
 		}
 	}
 
-	void StateRenderer::Rect(FRect* rect, Color rectColor) {
+	void StateRenderer::Rect(FloatRect* rect, Color rectColor) {
 		DrawColor(rectColor);
 
 		if (rect->fill) {
