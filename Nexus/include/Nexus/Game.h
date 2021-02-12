@@ -7,7 +7,7 @@ namespace Nexus {
 
 	class Game {
 	public:
-		static void Run(Configuration& config);
+		static void Run(Configuration& config, State* state);
 		
 		static void PushState(State* state);
 

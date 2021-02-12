@@ -6,8 +6,7 @@ int main(int argc, char** argv) {
 		"Sandbox", 640, 480, true
 	};
 
-	Nexus::Game::PushState(new MenuState());
-	Nexus::Game::Run(config);
+	Nexus::Game::Run(config, new MenuState);
 
 	return 0;
 }

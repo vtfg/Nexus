@@ -6,7 +6,9 @@ namespace Nexus {
 
 	State* Game::currentState = nullptr;
 
-	void Game::Run(Configuration& config) {
+	void Game::Run(Configuration& config, State* state) {
+		PushState(state);
+
 		Log::Init();
 		Window::Create(config);
 
