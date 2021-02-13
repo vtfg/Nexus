@@ -26,6 +26,8 @@ target_include_directories(Nexus
 	${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
+include_directories(${SDL2_INCLUDE_DIRS})
+
 target_link_libraries(Nexus
 	SDL2
 	spdlog
