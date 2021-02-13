@@ -1,0 +1,30 @@
+name: CMake
+
+on: [push, pull_request]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Download submodules
+      shell: bash
+      working-directory: ${{github.workspace}}
+      run: | 
+        git submodule init
+        git submodule update
+        
+    - name: Download SDL2
+      shell: bash
+      working-directory: ${{github.workspace}}
+      run: sudo apt install libsdl2-dev
+
+    - name: Build
+      working-directory: ${{github.workspace}}
+      shell: bash
+      run: cmake -B build/ -S .
