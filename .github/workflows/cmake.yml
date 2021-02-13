@@ -24,7 +24,12 @@ jobs:
       working-directory: ${{github.workspace}}
       run: sudo apt install libsdl2-dev
 
-    - name: Build
+    - name: Generate Makefile
       working-directory: ${{github.workspace}}
       shell: bash
       run: cmake -B build/ -S .
+    
+    - name: Build
+      working-directory: ${{github.workspace}}/build
+      shell: bash
+      run: make
