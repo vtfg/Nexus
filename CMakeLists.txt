@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 project(Nexus)
 
 set(CMAKE_CXX_STANDARD 17)
+option(NEXUS_ONLY "Build only the framework" ON)
 
 include("vendor/CPM/CPM.cmake")
 
@@ -22,4 +23,7 @@ endif()
 add_subdirectory(Nexus/vendor/spdlog)
 
 add_subdirectory(Nexus)
-add_subdirectory(Sandbox)
+
+if (NOT NEXUS_ONLY)
+	add_subdirectory(Sandbox)
+endif()
