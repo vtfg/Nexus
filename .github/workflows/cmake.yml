@@ -22,11 +22,18 @@ jobs:
         git submodule init
         git submodule update
         
-    - name: Download SDL2
+    - name: Download and install SDL2 v2.0.14
       shell: bash
       working-directory: ${{github.workspace}}
-      run: sudo apt install libsdl2-dev
-    
+      run: |
+        wget -c https://www.libsdl.org/release/SDL2-2.0.14.tar.gz -O - | tar -xz
+        cd SDL2-2.0.14/
+        mkdir build && cd build/
+        ../configure
+        make
+        sudo make install
+        sdl2-config --version
+
     - name: Configure CMake
       shell: bash
       working-directory: ${{github.workspace}}/build
