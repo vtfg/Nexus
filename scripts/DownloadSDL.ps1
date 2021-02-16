@@ -1,4 +1,4 @@
-cd ..\Nexus\vendor
+cd Nexus\vendor
 
 wget https://libsdl.org/release/SDL2-devel-2.0.14-VC.zip -O SDL2.zip
 Expand-Archive .\SDL2.zip .
