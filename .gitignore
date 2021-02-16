@@ -17,3 +17,6 @@ build/
 out/
 temp/
 CMakeSettings.json
+
+# Files and folders from my environment
+SDL2/
